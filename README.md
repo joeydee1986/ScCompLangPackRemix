@@ -35,7 +35,9 @@ This makes it easier to quickly scan and sort components by their stats at a gla
 ## ⬇️ Download and install
 
 Download the latest version here:
-[**Download Component Language Pack Remix**](https://github.com/joeydee1986/ScCompLangPackRemix/archive/refs/heads/main.zip)
+[**Download ScCompLangPackRemix v1**](https://github.com/joeydee1986/ScCompLangPackRemix/releases/latest/download/ScCompLangPackRemix-v1.zip)
+
+Or view all releases: [Releases Page](https://github.com/joeydee1986/ScCompLangPackRemix/releases)
 
 **Want the original format instead?** Check out [ExoAE's original pack](https://github.com/ExoAE/ScCompLangPack)
 
