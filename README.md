@@ -14,9 +14,9 @@ This version uses a **compact naming format** that puts the important stats firs
 **Remix format:**
 `XL-1` → `M2A XL-1`
 
-The format is: **[Grade][Size][Quality] [Component Name]**
+The format is: **[Type][Size][Quality] [Component Name]**
 
-**Grade abbreviations:**
+**Type abbreviations:**
 - **M** = Military
 - **I** = Industrial
 - **C** = Civilian
