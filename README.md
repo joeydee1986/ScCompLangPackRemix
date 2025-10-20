@@ -23,11 +23,16 @@ Found a bug or have an idea for improvement?
 
 Feel free to open an issue or submit a pull request!
 
+## Notes
+
+- This project is not affiliated with Cloud Imperium Games.
+- Using language packs is currently intendet by Cloud Imperium Games. 
+https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/star-citizen-community-localization-update
+
 ## ☕ Support and additional info
 
 If you’d like to support me, you can use my Star Citizen referral code when when buying the game:
 
 STAR-4JD7-RZT4
 
-This project is not affiliated with Cloud Imperium Games.
 Thank you for using my pack!
