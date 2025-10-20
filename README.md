@@ -20,7 +20,7 @@ The format is: **[Type][Size][Quality] [Component Name]**
 - **M** = Military
 - **I** = Industrial
 - **C** = Civilian
-- **R** = Racing (Competition)
+- **R** = Racing (Competition renamed to avoid conflict with Civilian)
 - **S** = Stealth
 
 **More examples:**
@@ -45,11 +45,16 @@ Download the latest version here:
 2. Copy the data folder and the user.cfg file into your game’s LIVE folder root.
 3. Launch the game.
 
-## 🚧 Contribute or Bugs
+## 🚧 Found an Error or Issue?
 
-Found a bug or have an idea for improvement?
+If you notice any incorrectly formatted component names, missing conversions, or other issues, please let us know!
 
-Feel free to open an issue or submit a pull request!
+**How to report:**
+- Open an issue on [GitHub Issues](https://github.com/joeydee1986/ScCompLangPackRemix/issues)
+- Include the component name and what's wrong
+- Screenshots are super helpful!
+
+We appreciate your help in making this pack better for everyone. Feel free to submit pull requests with fixes too!
 
 ## Notes
 
