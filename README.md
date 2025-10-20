@@ -9,7 +9,7 @@ For example:
 ## ⬇️ Download and install
 
 Download the latest version here:  
-[**Download Component Language Pack**](https://github.com/AsphaltExpert/ScCompLangPack/archive/refs/heads/main.zip)
+[**Download Component Language Pack**](https://github.com/ExoAE/ScCompLangPack/archive/refs/heads/main.zip)
 
 🔧 How to Install:
 
