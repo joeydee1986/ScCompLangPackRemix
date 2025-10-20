@@ -26,7 +26,7 @@ Feel free to open an issue or submit a pull request!
 ## Notes
 
 - This project is not affiliated with Cloud Imperium Games.
-- Using language packs is currently intendet by Cloud Imperium Games. 
+- Using language packs is currently intended by Cloud Imperium Games. 
 https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/star-citizen-community-localization-update
 
 ## ☕ Support and additional info
