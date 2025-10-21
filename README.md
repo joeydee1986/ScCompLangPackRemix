@@ -24,20 +24,17 @@ The format is: **[Type][Size][Quality] [Component Name]**
 - **S** = Stealth
 
 **More examples:**
-- `QuadraCell MT` → `M2A QuadraCell MT` (Military, Size 2, Grade A)
-- `Eco-Flow` → `I1B Eco-Flow` (Industrial, Size 1, Grade B)
-- `Cryo-Star` → `C1B Cryo-Star` (Civilian, Size 1, Grade B)
-- `AbsoluteZero` → `R2B AbsoluteZero` (Racing, Size 2, Grade B)
-- `NightFall` → `S2A NightFall` (Stealth, Size 2, Grade A)
+- `QuadraCell MT` → `M2A QuadraCell MT` (Military, Size 2, Quality A)
+- `Eco-Flow` → `I1B Eco-Flow` (Industrial, Size 1, Quality B)
+- `Cryo-Star` → `C1B Cryo-Star` (Civilian, Size 1, Quality B)
+- `AbsoluteZero` → `R2B AbsoluteZero` (Racing, Size 2, Quality B)
+- `NightFall` → `S2A NightFall` (Stealth, Size 2, Quality A)
 
 This makes it easier to quickly scan and sort components by their stats at a glance!
 
 ## ⬇️ Download and install
 
-Download the latest version here:
-[**Download ScCompLangPackRemix v1**](https://github.com/joeydee1986/ScCompLangPackRemix/releases/latest/download/ScCompLangPackRemix-v1.zip)
-
-Or view all releases: [Releases Page](https://github.com/joeydee1986/ScCompLangPackRemix/releases)
+**Download the latest version from the [Releases Page](https://github.com/joeydee1986/ScCompLangPackRemix/releases)**
 
 **Want the original format instead?** Check out [ExoAE's original pack](https://github.com/ExoAE/ScCompLangPack)
 
