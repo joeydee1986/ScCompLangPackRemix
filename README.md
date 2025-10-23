@@ -57,10 +57,31 @@ If you notice any incorrectly formatted component names, missing conversions, or
 
 We appreciate your help in making this pack better for everyone. Feel free to submit pull requests with fixes too!
 
+## Developer Tools (Beta)
+
+This repository includes extraction tools for developers and advanced users in the `tools/` folder. These tools allow you to:
+
+- Extract fresh `global.ini` files directly from Star Citizen's game files
+- Update the language pack when new patches are released
+- Maintain independence from third-party localization sources
+
+**📁 Additional Folders (Not in Releases):**
+
+- **`tools/`** - Extraction utilities and scripts (see `tools/README.md`)
+- **`stock-global-ini/`** - Vanilla game files extracted from Star Citizen
+
+**⚠️ These folders are NOT included in release downloads** - they're for development purposes only. Release ZIPs contain only `data/` and `user.cfg`.
+
+For more information, see:
+- `tools/README.md` - How to use the extraction tools
+- `.claude/claude.md` - Complete developer workflow
+
+---
+
 ## Notes
 
 - This project is not affiliated with Cloud Imperium Games.
-- Using language packs is currently intended by Cloud Imperium Games. 
+- Using language packs is currently intended by Cloud Imperium Games.
 https://robertsspaceindustries.com/spectrum/community/SC/forum/1/thread/star-citizen-community-localization-update
 
 ## ☕ Support the Original Creator
