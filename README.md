@@ -41,8 +41,10 @@ This makes it easier to quickly scan and sort components by their stats at a gla
 🔧 How to Install:
 
 1. Extract the ZIP file.
-2. Copy the data folder and the user.cfg file into your game’s LIVE folder root.
+2. Copy the data folder and the user.cfg file into your game's LIVE folder root.
 3. Launch the game.
+
+**Note for manual downloads:** If you download files directly from the repository instead of using a release ZIP, **only copy the `data` folder and `user.cfg` file**. Do not include the `.claude` folder - it's only used for project maintenance and future updates.
 
 ## 🚧 Found an Error or Issue?
 
