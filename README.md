@@ -30,7 +30,7 @@ The format is: **[Type][Size][Quality] [Component Name]**
 - `AbsoluteZero` → `R2B AbsoluteZero` (Racing, Size 2, Quality B)
 - `NightFall` → `S2A NightFall` (Stealth, Size 2, Quality A)
 
-This makes it easier to quickly scan and sort components by their stats at a glance!
+This makes it easier to quickly scan and sort components by their stats at a glance, which is my primary reason for this fork. I like to play 'self found', and I didn't want to waste time looting a ship that doesn't have components I want. This way, I can simply scan and move on.
 
 ## ⬇️ Download and install
 
