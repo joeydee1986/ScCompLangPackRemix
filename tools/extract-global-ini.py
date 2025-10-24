@@ -136,33 +136,52 @@ def extract_global_ini(data_p4k_path, unp4k_path, output_dir, branch, version):
     print_info(f"Extracting global.ini from {branch} (v{version})...")
     print_gray("This may take 30-120 seconds depending on your system...\n")
 
-    # Create temp directory
-    temp_dir = output_dir / "temp_extraction"
+    # Use Windows-native temp directory (avoids WSL UNC path issues)
+    if platform.system() == "Linux" and "microsoft" in platform.uname().release.lower():
+        # WSL: Use C:\Temp which is accessible as /mnt/c/Temp
+        temp_dir = Path("/mnt/c/Temp/sc_extract_temp")
+        temp_dir_win = "C:\\Temp\\sc_extract_temp"
+    else:
+        # Native Windows
+        temp_dir = Path("C:/Temp/sc_extract_temp")
+        temp_dir_win = "C:\\Temp\\sc_extract_temp"
+
     temp_dir.mkdir(parents=True, exist_ok=True)
 
     try:
-        # Convert paths for unp4k.exe (needs Windows paths)
-        data_p4k_win = convert_wsl_path(data_p4k_path)
-        temp_dir_win = convert_wsl_path(temp_dir)
-        unp4k_win = convert_wsl_path(unp4k_path)
+        # Copy unp4k.exe and DLLs to temp directory for DLL dependency resolution
+        unp4k_dir = unp4k_path.parent
+        shutil.copy2(unp4k_path, temp_dir / "unp4k.exe")
 
-        # Run unp4k.exe
-        cmd = [
-            unp4k_win,
-            data_p4k_win,
-            "*global.ini"
-        ]
+        # Copy DLL dependencies
+        for dll_file in unp4k_dir.glob("*.dll"):
+            shutil.copy2(dll_file, temp_dir / dll_file.name)
+
+        # Copy x64 directory if it exists
+        x64_source = unp4k_dir / "x64"
+        if x64_source.exists():
+            x64_dest = temp_dir / "x64"
+            if x64_dest.exists():
+                shutil.rmtree(x64_dest)
+            shutil.copytree(x64_source, x64_dest)
+
+        # Convert Data.p4k path for Windows
+        data_p4k_win = convert_wsl_path(data_p4k_path)
+
+        # Run unp4k.exe from temp directory (where DLLs are accessible)
+        # Use PowerShell to handle Windows paths correctly from WSL
+        cmd = f'cd "{temp_dir_win}"; & .\\unp4k.exe "{data_p4k_win}" "Data/Localization/english/global.ini"'
+
+        print_gray("Running extraction (showing live output)...\n")
 
         result = subprocess.run(
-            cmd,
-            cwd=temp_dir_win,
-            capture_output=True,
-            text=True,
+            ["powershell.exe", "-Command", cmd],
+            capture_output=False,  # Show real-time progress
             timeout=300  # 5 minute timeout
         )
 
         if result.returncode != 0:
-            raise Exception(f"unp4k.exe failed with exit code {result.returncode}\n{result.stderr}")
+            raise Exception(f"unp4k.exe failed with exit code {result.returncode}")
 
         # Find the extracted global.ini
         extracted_files = list(temp_dir.rglob("global.ini"))
@@ -180,6 +199,7 @@ def extract_global_ini(data_p4k_path, unp4k_path, output_dir, branch, version):
         # Get file size
         file_size_mb = output_path.stat().st_size / (1024 * 1024)
 
+        print()
         print_success(f"Extracted global.ini successfully!")
         print_info(f"  Saved to: {output_path.relative_to(Path.cwd())}")
         print_info(f"  File size: {file_size_mb:.2f} MB")
